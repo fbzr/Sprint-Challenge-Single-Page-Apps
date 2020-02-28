@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 
@@ -9,7 +9,6 @@ export default function SearchForm({ handleSearch }) {
   
   const changeText = e => {
     setText(e.target.value);
-    // console.log(e.target.value);
   }
   
   useEffect(() => {
@@ -18,8 +17,8 @@ export default function SearchForm({ handleSearch }) {
   }, [text]);
 
   return (
-    <section className="search-form">
+    <Grid container justify='center'>
       <TextField onChange={changeText} label='Search' />
-    </section>
+    </Grid>
   );
 }
