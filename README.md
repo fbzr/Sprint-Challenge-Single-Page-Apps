@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: The page doesn't make a request to the server every you change routes. It doesn't reload the entire page every link click. Because of that, less data is processed and usually makes navigation faster. 
 
 ## Project Set Up
 
