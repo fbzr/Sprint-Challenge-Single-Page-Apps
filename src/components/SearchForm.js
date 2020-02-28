@@ -20,9 +20,6 @@ export default function SearchForm({ handleSearch }) {
   return (
     <section className="search-form">
       <TextField onChange={changeText} label='Search' />
-      <Link to='/'>
-        <Button variant="contained">Home</Button>
-      </Link>
     </section>
   );
 }

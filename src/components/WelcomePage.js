@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from '@material-ui/core';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -36,21 +34,6 @@ export default function WelcomePage() {
           alt="rick"
         />
       </Header>
-      <Button variant="contained">
-        <Link to='/characters'>
-          <p>See characters</p>
-        </Link>
-      </Button>
-      <Button variant="contained">
-        <Link to='/location'>
-          <p>See locations</p>
-        </Link>
-      </Button>
-      <Button variant="contained">
-        <Link to='/episodes'>
-          <p>See episodes</p>
-        </Link>
-      </Button>
     </Section>
   );
 }
