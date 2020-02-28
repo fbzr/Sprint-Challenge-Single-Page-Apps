@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-
-
+import { TextField, Grid } from '@material-ui/core';
 
 export default function SearchForm({ handleSearch }) {
   const [text, setText] = useState('');
