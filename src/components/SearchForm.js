@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { TextField } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
+
 
 export default function SearchForm({ handleSearch }) {
   const [text, setText] = useState('');
@@ -17,6 +20,9 @@ export default function SearchForm({ handleSearch }) {
   return (
     <section className="search-form">
       <TextField onChange={changeText} label='Search' />
+      <Link to='/'>
+        <Button variant="contained">Home</Button>
+      </Link>
     </section>
   );
 }
