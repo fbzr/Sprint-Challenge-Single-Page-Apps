@@ -6,29 +6,30 @@ import SearchForm from './SearchForm';
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
+  const [searchData, setSearchData] = useState([]);
+
+  const handleSearch = (searchText) => {
+    const result = data.filter(character => {
+      return character.name.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setSearchData(result);
+  }
 
   useEffect(() => {
-    const getData = () => {
       Axios.get('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/')
       .then(res => {
         setData(res.data.results);
+        setSearchData(res.data.results);
       })
       .catch(err => console.log(err));
-    }
-    
-    getData();
-
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
   return (
     <section className="character-list">
-    <SearchForm />
-      {data.map((character) => (
-        <CharacterCard character={character} key={character.id} />
-      ))}
-      <h2>TODO: `array.map()` over your state here!</h2>
+    <SearchForm handleSearch={handleSearch} />
+        { searchData.map((character) => (
+          <CharacterCard character={character} key={character.id} />
+        )) }
     </section>
   );
 }
