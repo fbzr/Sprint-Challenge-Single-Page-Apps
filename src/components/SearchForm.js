@@ -9,7 +9,6 @@ export default function SearchForm({ handleSearch }) {
   }
   
   useEffect(() => {
-    console.log(text);
     handleSearch(text);
   }, [text]);
 

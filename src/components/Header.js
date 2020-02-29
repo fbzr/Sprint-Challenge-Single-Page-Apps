@@ -19,7 +19,7 @@ export default function Header() {
         <Tabs value={pathName} indicatorColor='primary' textColor='primary' centered>
           <Tab label="Home" component={Link} value="/" to='/' />
           <Tab label="Characters" component={Link} value="/characters" to='/characters' />
-          <Tab label="Locations" component={Link} value="/location" to='/location' />
+          <Tab label="Locations" component={Link} value="/locations" to='/locations' />
           <Tab label="Episodes" component={Link} value="/episodes" to='/episodes' />
         </Tabs>
       </Paper>

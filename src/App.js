@@ -18,7 +18,7 @@ export default function App() {
       <Route exact path='/characters'>
         <CharacterList />
       </Route>
-      <Route exact path='/location'>
+      <Route exact path='/locations'>
         <LocationsList />
       </Route>
       <Route exact path='/episodes'>
