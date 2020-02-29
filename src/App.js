@@ -5,11 +5,12 @@ import LocationsList from "./components/LocationsList";
 import EpisodesList from "./components/EpisodesList";
 import { Route } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage.js";
+import { Container } from "@material-ui/core";
 
 
 export default function App() {
   return (
-    <main>
+    <Container maxWidth='md'>
       <Header />
       <Route exact path='/'>
         <WelcomePage />
@@ -17,12 +18,12 @@ export default function App() {
       <Route exact path='/characters'>
         <CharacterList />
       </Route>
-      <Route exact path='/location'>
+      <Route exact path='/locations'>
         <LocationsList />
       </Route>
       <Route exact path='/episodes'>
         <EpisodesList />
       </Route>
-    </main>
+    </Container>
   );
 }

@@ -1,28 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-
-
+import { TextField, Grid } from '@material-ui/core';
 
 export default function SearchForm({ handleSearch }) {
   const [text, setText] = useState('');
   
   const changeText = e => {
     setText(e.target.value);
-    // console.log(e.target.value);
   }
   
   useEffect(() => {
-    console.log(text);
     handleSearch(text);
   }, [text]);
 
   return (
-    <section className="search-form">
+    <Grid container justify='center'>
       <TextField onChange={changeText} label='Search' />
-      <Link to='/'>
-        <Button variant="contained">Home</Button>
-      </Link>
-    </section>
+    </Grid>
   );
 }
